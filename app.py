@@ -338,16 +338,18 @@ async def webhook():
     return 'OK'
 
 # Запуск Flask сервера
-if __name__ == '__main__':
-    import asyncio
-    from threading import Thread
+# if __name__ == '__main__':
+   #  import asyncio
+ #    from threading import Thread
     
-    def run_flask():
-        flask_app.run(host='0.0.0.0', port=int(os.getenv('PORT', 5000)))
+#     def run_flask():
+ #        flask_app.run(host='0.0.0.0', port=int(os.getenv('PORT', 5000)))
     
     # Запускаем Flask в отдельном потоке
-    flask_thread = Thread(target=run_flask)
-    flask_thread.start()
+ #    flask_thread = Thread(target=run_flask)
+   #  flask_thread.start()
     
     # Запускаем бота
-    asyncio.run(run_bot())
+#     asyncio.run(run_bot())
+if __name__ == '__main__':
+    flask_app.run(host='0.0.0.0', port=5000)
